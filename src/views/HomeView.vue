@@ -70,6 +70,7 @@
         },
         methods: {
             logout() {
+                console.log('home logout')
                 this.isLoggedIn = false
                 this.user.imageUrl = ''
                 this.user.email = ''
