@@ -8,6 +8,7 @@
     export default {
         name: 'parse',
         mounted() {
+            console.log('parsing')
             const url = new URL(window.location.href)
             const fragment = url.hash
             const cleanedFragment = fragment.slice(1)
