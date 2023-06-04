@@ -74,7 +74,10 @@
                 this.user.imageUrl = ''
                 this.user.email = ''
                 this.user.name = ''
-                localStorage.clear()
+                localStorage.removeItem('accessToken')
+                localStorage.removeItem('name')
+                localStorage.removeItem('imageUrl')
+                localStorage.removeItem('email')
             },
         },
     }
