@@ -10,6 +10,10 @@
         created() {
             const isParsed = localStorage.getItem('isParsed')
             if (isParsed) {
+                localStorage.removeItem('accessToken')
+                localStorage.removeItem('name')
+                localStorage.removeItem('imgUrl')
+                localStorage.removeItem('email')
                 router.push('/')
             }
         },
