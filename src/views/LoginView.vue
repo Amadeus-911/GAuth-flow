@@ -38,7 +38,7 @@
         // Parameters to pass to OAuth 2.0 endpoint.
         var params = {
             client_id: '1020136124385-i9is0ag7pr3hapsa97ac1u06horb932a.apps.googleusercontent.com',
-            redirect_uri: 'https://g-auth-flow.vercel.app/parse',
+            redirect_uri: 'http://localhost:8080/parse',
             response_type: 'token',
             scope: 'https://www.googleapis.com/auth/drive.metadata.readonly',
             include_granted_scopes: 'true',
