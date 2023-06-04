@@ -10,11 +10,6 @@
         created() {
             const isParsed = localStorage.getItem('isParsed')
             if (isParsed) {
-                localStorage.removeItem('accessToken')
-                localStorage.removeItem('name')
-                localStorage.removeItem('imgUrl')
-                localStorage.removeItem('email')
-
                 const cleanUrl = () => {
                     const cleanURL = window.location.protocol + '//' + window.location.host + window.location.pathname
                     window.history.replaceState({}, document.title, cleanURL)
