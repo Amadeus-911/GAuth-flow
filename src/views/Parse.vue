@@ -20,7 +20,6 @@
             })
 
             localStorage.setItem('accessToken', params.access_token)
-            localStorage.setItem('isToken', true)
             if (params.access_token) {
                 router.push('/')
             } else {

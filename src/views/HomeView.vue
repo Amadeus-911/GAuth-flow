@@ -77,7 +77,7 @@
                 this.user.name = ''
                 localStorage.removeItem('accessToken')
                 localStorage.removeItem('name')
-                localStorage.removeItem('imageUrl')
+                localStorage.removeItem('imgUrl')
                 localStorage.removeItem('email')
             },
         },
