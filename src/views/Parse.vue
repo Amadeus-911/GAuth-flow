@@ -7,19 +7,7 @@
 
     export default {
         name: 'parse',
-        created() {
-            const isParsed = localStorage.getItem('isParsed')
-            if (isParsed) {
-                const cleanUrl = () => {
-                    const cleanURL = window.location.protocol + '//' + window.location.host + window.location.pathname
-                    window.history.replaceState({}, document.title, cleanURL)
-                }
-
-                cleanUrl()
-
-                router.push('/')
-            }
-        },
+        created() {},
         mounted() {
             console.log('parsing')
             const url = new URL(window.location.href)
@@ -33,7 +21,6 @@
             })
 
             localStorage.setItem('accessToken', params.access_token)
-            localStorage.setItem('isParsed', true)
             if (params.access_token) {
                 const cleanUrl = () => {
                     const cleanURL = window.location.protocol + '//' + window.location.host + window.location.pathname
