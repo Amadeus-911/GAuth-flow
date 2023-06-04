@@ -7,6 +7,12 @@
 
     export default {
         name: 'parse',
+        created() {
+            const isParsed = localStorage.getItem('isParsed')
+            if (isParsed) {
+                router.push('/')
+            }
+        },
         mounted() {
             console.log('parsing')
             const url = new URL(window.location.href)
@@ -20,6 +26,7 @@
             })
 
             localStorage.setItem('accessToken', params.access_token)
+            localStorage.setItem('isParsed', true)
             if (params.access_token) {
                 router.push('/')
             } else {
