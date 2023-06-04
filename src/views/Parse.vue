@@ -21,12 +21,13 @@
             })
 
             localStorage.setItem('accessToken', params.access_token)
+
             if (params.access_token) {
                 const cleanUrl = () => {
+                    console.log('cleaningUrl')
                     const cleanURL = window.location.protocol + '//' + window.location.host + window.location.pathname
                     window.history.replaceState({}, document.title, cleanURL)
                 }
-
                 cleanUrl()
                 router.push('/')
             } else {
